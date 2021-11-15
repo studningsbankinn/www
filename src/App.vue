@@ -87,6 +87,22 @@ export default {
 </script>
 
 <style>
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  background: #F2F6FA
+}
+.section {
+  padding : 0;
+  height: 100%;
+}
+
+section .container { 
+  padding: 3rem;
+  background: #FFFFFF;
+  height: 100%;
+}
 .sif-color, .is-active {
   color: #00a4e3;
 
