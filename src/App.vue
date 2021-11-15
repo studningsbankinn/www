@@ -1,15 +1,17 @@
 <template>
 <section class="section">
-  <div class="container">
+  <div class="container">    
 
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-menu">
-        <div class="navbar-start">
-          <div class="navbar-item">
-            <Search :places="places" @select="selectPlace" />
-          </div>
-        </div>
-
+      <div class="navbar-brand">        
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" @click="showNav = !showNav">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      
+      <div id="navbar" class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-end">
           <router-link
             to="/velkomin"
@@ -37,6 +39,9 @@
         </div>
       </div>
     </nav>
+
+    <Search :places="places" @select="selectPlace" class="search" />
+
     <router-view />
   </div>
 
@@ -55,6 +60,7 @@ export default {
   data () {
     return {
       places: [],
+      showNav: false
     }
   },
   created () {
@@ -94,23 +100,14 @@ export default {
   color: rgb(82, 150, 0);
 }
 
-.no-padding-margin {
-  margin: 0;
-  padding-top: 0;
-}
-
 .radarchart {
   max-height: 400px;
   display: block;
 }
 
-.navbar-start .navbar-item {
-  align-items: center;
-  flex-grow: 2;
-  flex-shrink: 2;
+.search {
+  margin-bottom: 1rem;
 }
-nav {
-  margin-bottom: 1.5em;
-}
+
 </style>
 
