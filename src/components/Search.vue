@@ -8,6 +8,8 @@
           class="input is-medium"
           type="text"
           placeholder="Leita eftir skóla"
+          aria-label="Leita eftir skóla"
+          role="combobox"
           @focus="showTopResults"
           @blur="clearResults"
           @input="searchInput"
@@ -27,6 +29,7 @@
         v-for="place in results"
         :key="place.id"
         class="dropdown-item"
+        role="menuitem"
         @click="select(place)"
       >
         {{ place.name }}
