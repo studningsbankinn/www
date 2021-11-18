@@ -8,6 +8,7 @@
           class="input is-medium"
           type="text"
           placeholder="Leita eftir skóla"
+          title="Leita eftir skóla"
           aria-label="Leita eftir skóla"
           role="combobox"
           @focus="showTopResults"
@@ -15,10 +16,10 @@
           @input="searchInput"
         />
         <span class="icon is-small is-left">
-          <i class="fa fa-search"></i>
+          <i class="fa fa-search" aria-label="stækkunargler" role="img"></i>
         </span>
         <span class="icon is-small is-right pointer">
-          <i class="fa fa-angle-down"></i>
+          <i class="fa fa-angle-down" aria-label="hnappur fyrir fellivalmynd" role="button"></i>
         </span>
       </div>
     </div>
