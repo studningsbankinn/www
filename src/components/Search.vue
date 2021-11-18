@@ -1,5 +1,5 @@
 <template>
-<div class="dropdown" :class="{ 'is-active': results.length}">
+<div class="dropdown" :class="{ 'is-active': results.length > 0}" role="combobox" :aria-expanded="results.length > 0">
   <div class="dropdown-trigger">
     <div class="field">
       <div class="control has-icons-left has-icons-right">
@@ -10,7 +10,8 @@
           placeholder="Leita eftir skóla"
           title="Leita eftir skóla"
           aria-label="Leita eftir skóla"
-          role="combobox"
+          aria-multiline="false"
+          aria-autocomplete="list"
           @focus="showTopResults"
           @blur="clearResults"
           @input="searchInput"
@@ -24,13 +25,12 @@
       </div>
     </div>
   </div>
-  <div class="dropdown-menu" role="menu">
+  <div class="dropdown-menu" role="listbox">
     <div class="dropdown-content">
       <a
         v-for="place in results"
         :key="place.id"
-        class="dropdown-item"
-        role="menuitem"
+        class="dropdown-item"        
         @click="select(place)"
       >
         {{ place.name }}
