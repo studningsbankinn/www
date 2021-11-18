@@ -17,7 +17,7 @@
         <span class="icon is-small is-left">
           <i class="fa fa-search"></i>
         </span>
-        <span class="icon is-small is-right">
+        <span class="icon is-small is-right pointer">
           <i class="fa fa-angle-down"></i>
         </span>
       </div>
@@ -89,7 +89,7 @@ export default {
   color: #000;
 }
 
-.has-icons-right .is-right:hover {
+.pointer:hover {
   cursor: pointer;
 }
 </style>
