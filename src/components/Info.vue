@@ -25,7 +25,7 @@
             <span>Sími:</span>
           </span>
         </th>
-        <td>{{ place.phone }}</td>
+        <td><a v-if="place.phone" :href="'tel:'+ place.phone">{{ place.phone }}</a></td>
       </tr>   
       <tr>
         <th>
@@ -37,6 +37,7 @@
           </span>
         </th>
         <td>{{ place.email }}</td>
+        <td><a v-if="place.email" :href="'mailto:'+ place.email">{{ place.email }}</a></td>
       </tr>   
       <tr>
         <th>
@@ -47,7 +48,7 @@
             <span>Heimasíða:</span>
           </span>
         </th>
-        <td>{{ place.website }}</td>
+        <td><a v-if="place.website" :href="place.website">{{ place.website }}</a></td>
       </tr>
     </tbody>
   </table>
