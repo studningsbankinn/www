@@ -52,15 +52,24 @@ export default {
           plugins: {
             legend: false
           },
-          scale: {
+          scale: { 
             beginAtZero: true,
             max: 100,
             min: 0,
-            stepSize: 20,          
-            ticks: {
-              callback: function (value) {
-                return value + '%'
-              }
+            stepSize: 20,                       
+          },
+          scales: {
+            r: {
+              pointLabels: {
+                font: {
+                  size: 16
+                }
+              },
+              ticks: {
+                callback: function (value) {
+                  return value + '%'
+                }
+              }, 
             }
           }
         },
