@@ -36,7 +36,6 @@
             <span>Netfang:</span>
           </span>
         </th>
-        <td>{{ place.email }}</td>
         <td><a v-if="place.email" :href="'mailto:'+ place.email">{{ place.email }}</a></td>
       </tr>   
       <tr>
