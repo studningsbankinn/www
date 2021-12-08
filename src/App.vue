@@ -131,7 +131,7 @@ section .container {
 }
 
 .skipLinkVisible {
-  margin-top: 0
+  top: 0;
 }
 
 .skipLinkHidden {
