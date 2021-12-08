@@ -1,8 +1,8 @@
 <template>
 <section class="section">
-  <div class="container">    
-
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <a href="#main" style="display:none;">Beint í meginmál</a>
+    <nav class="navbar" role="navigation" aria-label="Leiðarkerfi">
       <div class="navbar-brand">        
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" @click="showNav = !showNav">
           <span aria-hidden="true"></span>
@@ -41,8 +41,9 @@
     </nav>
 
     <Search :places="places" @select="selectPlace" class="search" />
-
-    <router-view />
+    <main id="main" role="main" aria-label="Innihald">
+      <router-view />
+    </main>
   </div>
 
 </section>
