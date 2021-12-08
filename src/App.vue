@@ -17,6 +17,7 @@
             to="/velkomin"
             class="navbar-item"
             active-class="is-active"
+            role="link"
           >
             Velkomin
           </router-link>
@@ -25,6 +26,7 @@
             to="/um"
             class="navbar-item"
             active-class="is-active"
+            role="link"
           >
             Um Stuðningsbankann
           </router-link>
@@ -33,6 +35,7 @@
             to="/upplysingar"
             class="navbar-item"
             active-class="is-active"
+            role="link"
           >
             Nytsamlegar upplýsingar
           </router-link>
