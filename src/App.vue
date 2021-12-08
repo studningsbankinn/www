@@ -1,7 +1,7 @@
 <template>
 <section class="section">
   <div class="container">
-    <a href="#main" :class="{ skipLinkVisible: showSkip, skipLinkHidden: !showSkip }" @focus="showSkip = true" @blur="showSkip = false">Beint í meginmál</a>
+    <a href="#main">Beint í meginmál</a>
     <nav class="navbar" role="navigation" aria-label="Leiðarkerfi">
       <div class="navbar-brand">        
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" @click="showNav = !showNav">
