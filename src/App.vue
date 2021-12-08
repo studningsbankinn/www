@@ -1,7 +1,7 @@
 <template>
 <section class="section">
   <div class="container">
-    <a href="#main" style="display:none;">Beint í meginmál</a>
+    <a href="#main" :class="{ skipLinkVisible: showSkip, skipLinkHidden: !showSkip }" @focus="showSkip = true" @blur="showSkip = false">Beint í meginmál</a>
     <nav class="navbar" role="navigation" aria-label="Leiðarkerfi">
       <div class="navbar-brand">        
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" @click="showNav = !showNav">
@@ -44,7 +44,7 @@
     </nav>
 
     <Search :places="places" @select="selectPlace" class="search" />
-    <main id="main" role="main" aria-label="Innihald">
+    <main id="main" role="main" aria-label="Meginmál">
       <router-view />
     </main>
   </div>
@@ -64,7 +64,8 @@ export default {
   data () {
     return {
       places: [],
-      showNav: false
+      showNav: false,
+      showSkip: false,
     }
   },
   created () {
@@ -85,7 +86,7 @@ export default {
           this.places = data.body
         })
     }
-  }
+  } 
 }
 
 </script>
@@ -127,6 +128,15 @@ section .container {
 
 .search {
   margin-bottom: 1rem;
+}
+
+.skipLinkVisible {
+  margin-top: 0
+}
+
+.skipLinkHidden {
+  position: relative;
+  top: -200px;
 }
 
 </style>
