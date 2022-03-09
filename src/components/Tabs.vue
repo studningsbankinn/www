@@ -37,7 +37,7 @@ export default {
         'Námið': 'fas fa-university',
         'Próftaka': 'fas fa-user-edit',
         'Starfsemi': 'fas fa-hands-helping',
-        'Önnur húsnæðismál': 'fas fa-school',
+        'Heimavist': 'fas fa-school',
         'Réttindi': 'fas fa-universal-access',
         'Félagslífið': 'fas fa-users'
       }
