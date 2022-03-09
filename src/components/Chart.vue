@@ -1,5 +1,5 @@
 <template>
-    <canvas id="radarChart"></canvas>
+    <canvas id="chart"></canvas>
 </template>
 
 <script>
@@ -44,8 +44,8 @@ export default {
   },
   mounted() {
     try {
-      this.radarchart = new Chart('radarChart', {
-        type: 'radar',
+      this.radarchart = new Chart('chart', {
+        type: 'bar',
         options: {
           responsive: true,
           maintainAspectRatio: false,
@@ -56,22 +56,8 @@ export default {
             beginAtZero: true,
             max: 100,
             min: 0,
-            stepSize: 20,                       
+            stepSize: 10,                       
           },
-          scales: {
-            r: {
-              pointLabels: {
-                font: {
-                  size: 16
-                }
-              },
-              ticks: {
-                callback: function (value) {
-                  return value + '%'
-                }
-              }, 
-            }
-          }
         },
         data: {}
       })
