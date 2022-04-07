@@ -6,6 +6,14 @@
 export default {
   name: 'Chart',
   props: {
+    categoryName: {
+      type: String,
+      default: 'questionCategoryName'
+    },
+    indexAxis: {
+      type: String,
+      default: 'x',
+    },
     series: {
       type: Array,
       required: true,
@@ -13,13 +21,13 @@ export default {
   },
   data () {
     return {
-      radarchart: undefined
+      chart: undefined
     }
   },
   methods: {
     calculate(labels) {
       return labels.map(label => {
-        const category = this.series.filter(item => item.questionCategoryName === label)
+        const category = this.series.filter(item => item[this.categoryName] === label)
         const count = category.length
         const yesCount = category.filter(item => item.answer).length
         return Math.round(yesCount/count * 100)
@@ -28,8 +36,8 @@ export default {
   },
   watch: {
     series (val)  {
-      const labels = val.map(item => item.questionCategoryName).filter((item, index, self) => self.indexOf(item) === index)
-      this.radarchart.data = {
+      const labels = val.map(item => item[this.categoryName]).filter((item, index, self) => self.indexOf(item) === index)
+      this.chart.data = {
         labels,
         datasets: [{
           fill: true,
@@ -39,14 +47,15 @@ export default {
         }]
       }
       
-      this.radarchart.update()
+      this.chart.update()
     }
   },
   mounted() {
     try {
-      this.radarchart = new Chart('chart', {
+      this.chart = new Chart('chart', {
         type: 'bar',
         options: {
+          indexAxis: this.indexAxis,
           responsive: true,
           maintainAspectRatio: false,
           plugins: {

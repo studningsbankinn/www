@@ -94,22 +94,20 @@ export default {
 html, body {
   margin: 0 auto;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   background: #F2F6FA
 }
 .section {
   padding : 0;
-  height: 100%;
 }
 
 section .container { 
   padding: 3rem;
   background: #FFFFFF;
-  height: 100%;
 }
+
 .sif-color, .is-active {
   color: #00a4e3;
-
 }
 
 .fa-thumbs-down {
@@ -118,11 +116,6 @@ section .container {
 
 .fa-thumbs-up {
   color: rgb(82, 150, 0);
-}
-
-.radarchart {
-  max-height: 400px;
-  display: block;
 }
 
 .search {
