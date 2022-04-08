@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     showTopResults () {
-      this.results = this.places.slice(0,10)
+      this.results = this.places //.slice(0,10)
     },
     clearResults () {
       setTimeout(() => {
