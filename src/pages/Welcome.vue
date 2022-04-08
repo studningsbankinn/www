@@ -39,7 +39,7 @@ export default {
       .get(process.env.STUDNINGSBANKINN_API_URL + '/places')
       .set('Authorization', 'Bearer ' + process.env.STUDNINGSBANKINN_API_KEY)
       .then(data => {
-        this.places = data.body.sort((a, b) => a.localeCompare(b))
+        this.places = data.body.sort((a, b) => a.name.localeCompare(b.name))
       })        
     
     agent
