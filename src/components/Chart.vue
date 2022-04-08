@@ -27,7 +27,9 @@ export default {
   methods: {
     calculate(labels) {
       return labels.map(label => {
-        const category = this.series.filter(item => item[this.categoryName] === label)
+        const category = this.series
+          .filter(item => item[this.categoryName] === label)
+          .sort((a, b) => a['categoryName'].localeCompare(b['categoryName'))
         const count = category.length
         const yesCount = category.filter(item => item.answer).length
         return Math.round(yesCount/count * 100)
@@ -36,7 +38,10 @@ export default {
   },
   watch: {
     series (val)  {
-      const labels = val.map(item => item[this.categoryName]).filter((item, index, self) => self.indexOf(item) === index)
+      const labels = val
+        .map(item => item[this.categoryName])
+        .filter((item, index, self) => self.indexOf(item) === index)
+        .sort((a, b) => a['categoryName'].localeCompare(b['categoryName'))
       this.chart.data = {
         labels,
         datasets: [{
