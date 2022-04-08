@@ -89,6 +89,12 @@ export default {
 .dropdown-menu .dropdown-item {
   font-size: 1rem;
 }
+
+.dropdown-content {
+  max-height: 250px;
+  overflow: auto;
+}
+
 .has-icons-right .is-right {
   color: #000;
 }
