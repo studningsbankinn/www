@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     showTopResults () {
-      this.results = this.places.slice(0,10)
+      this.results = this.places //.slice(0,10)
     },
     clearResults () {
       setTimeout(() => {
@@ -84,6 +84,11 @@ export default {
 .dropdown-trigger,
 .dropdown-menu {
   width: 100%;
+}
+
+.dropdown-content {
+  max-height: 240px;
+  overflow: auto;
 }
 
 .dropdown-menu .dropdown-item {
