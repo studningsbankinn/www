@@ -1,4 +1,3 @@
-require('dotenv-flow').config()
 const express = require('express')
 const compression = require('compression')
 const bodyParser = require('body-parser')
