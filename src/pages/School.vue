@@ -49,6 +49,7 @@ export default {
       return this.answers
         .map(item => item.questionCategoryName)
         .filter((item, index, self) => self.indexOf(item) === index)
+        .sort((a, b) => a.localeCompare(b))        
     }
   },
   mounted () {

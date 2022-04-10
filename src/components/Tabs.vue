@@ -7,7 +7,7 @@
       :class="{ 'is-active' : tab === selected }"
     >
       <a @click="select(tab)">
-          <span class="icon is-small">
+          <span class="icon is-small" :style="{ color: colors[tab] }">
             <i :class="icons[tab]"></i>
           </span>
           <span>{{ tab }}</span>
@@ -34,12 +34,21 @@ export default {
       selected: undefined,
       icons: {
         'Aðgengi': 'fab fa-accessible-icon',
+        'Félagslífið': 'fas fa-users',
+        'Heimavist': 'fas fa-school',
         'Námið': 'fas fa-university',
         'Próftaka': 'fas fa-user-edit',
-        'Starfsemi': 'fas fa-hands-helping',
-        'Heimavist': 'fas fa-school',
         'Réttindi': 'fas fa-universal-access',
-        'Félagslífið': 'fas fa-users'
+        'Starfsemi': 'fas fa-hands-helping',
+      },
+      colors: {
+        'Aðgengi': '#e69f00',
+        'Félagslífið': '#56b4e9',
+        'Heimavist': '#f0e442',
+        'Námið': '#019e73',
+        'Próftaka': '#0072b2',
+        'Réttindi': '#d55e00',
+        'Starfsemi': '#cc79a7',
       }
     }
   },

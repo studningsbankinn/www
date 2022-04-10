@@ -40,14 +40,20 @@ export default {
         .map(item => item[this.categoryName])
         .filter((item, index, self) => self.indexOf(item) === index)
         .sort((a, b) => a.localeCompare(b))
-
+      
       this.chart.data = {
         labels,
         datasets: [{
-          fill: true,
           data: this.calculate(labels),
-          backgroundColor: 'rgba(0, 164, 227, 0.5)',
-          borderColor: 'rgba(0, 164, 227, 1)'
+          backgroundColor: [
+            '#e69f00',
+            '#56b4e9',
+            '#f0e442',
+            '#019e73',
+            '#0072b2',
+            '#d55e00',
+            '#cc79a7',
+          ],
         }]
       }
       
