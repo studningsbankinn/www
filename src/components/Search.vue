@@ -72,7 +72,13 @@ export default {
     searchInput(e) {
       this.search = e.target && e.target.value
 
-      this.results = this.places.filter(place => place.name.toUpperCase().includes(this.search.toUpperCase()))
+      this.results = this.places.filter(place => {
+        const name = place.name.toUpperCase().includes(this.search.toUpperCase())
+        const shortName = place.shortName && place.shortName.toUpperCase().includes(this.search.toUpperCase())
+        const abbreviation = place.abbreviation && place.abbreviation.toUpperCase().includes(this.search.toUpperCase())
+
+        return name || shortName  || abbreviation
+      })
     },
   },
 }
