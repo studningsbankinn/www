@@ -31,7 +31,7 @@
   <Card>    
     <h3 class="title is-6 has-text-centered">Rauði krossinn</h3>    
     <img src="../images/raudi_krossinn_logo.png" alt="Hljóðbókasafn Íslands Logo">
-    <p>Rauði krossinn um allt land veiri einstaklingum í erfiðleiku margvíslega aðstoð.</p>
+    <p>Rauði krossinn um allt land veitir einstaklingum í erfiðleiku margvíslega aðstoð.</p>
     <p>Aðstoð í boði - Rauði krossinn: <a href="https://www.raudikrossinn.is/hvad-gerum-vid/adstod-i-bodi/">raudikrossinn.is/hvad-gerum-vid/adstod-i-bodi</a></p>
     <p>Á Akureyri er námsaðstoð í boði fyrir born og ungmenni:</p>
     <p>Námsaðstoð: <a href="https://www.raudikrossinn.is/hvad-gerum-vid/krakkanam">raudikrossinn.is/hvad-gerum-vid/krakkanam</a></p>  
