@@ -31,11 +31,22 @@
   <Card>    
     <h3 class="title is-6 has-text-centered">Rauði krossinn</h3>    
     <img src="../images/raudi_krossinn_logo.png" alt="Hljóðbókasafn Íslands Logo">
-    <p>Rauði krossinn um allt land veiri einstaklingum í erfiðleiku margvíslega aðstoð.</p>
+    <p>Rauði krossinn um allt land veitir einstaklingum í erfiðleiku margvíslega aðstoð.</p>
     <p>Aðstoð í boði - Rauði krossinn: <a href="https://www.raudikrossinn.is/hvad-gerum-vid/adstod-i-bodi/">raudikrossinn.is/hvad-gerum-vid/adstod-i-bodi</a></p>
     <p>Á Akureyri er námsaðstoð í boði fyrir born og ungmenni:</p>
     <p>Námsaðstoð: <a href="https://www.raudikrossinn.is/hvad-gerum-vid/krakkanam">raudikrossinn.is/hvad-gerum-vid/krakkanam</a></p>  
   </Card>
+  
+   <Card>    
+    <h3 class="title is-6 has-text-centered">Tiro</h3>    
+    <img src="../images/raudi_krossinn_logo.png" alt="Hljóðbókasafn Íslands Logo">
+    <p>Sjálfvirk talgreining fyrir íslenskt talmál yfir í ritaðan texta.</p>
+    <p>Tiro er fremst á sviði talgreiningar á íslensku. Við sköpum notendavænar lausnir sem byggja á máltækni og gervigreind. Þau bjóða upp á:
+    Rauntímatextun þar sem beinar útsendingar verða aðgengilegri með sjálfvirkri textun í rauntíma. 
+    Skjátextun þar sem hjálpar þér að bæta íslenskum texta við myndbandið þitt hratt og örugglega. 
+    Sérsníðin talgreining þar sem þau sérhæfa sig í að þróa sértækar lausnir sem nota íslenska talgreiningu.
+    <p>Nánar hér: <a href="https://tiro.is/">https://tiro.is/</a></p>
+   </Card>
 
 </div>
 </template>
