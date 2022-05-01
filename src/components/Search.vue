@@ -33,7 +33,7 @@
         v-for="place in results"
         :key="place.id"
         class="dropdown-item"
-        role="option"    
+        role="option"
         @click="select(place)"
       >
         {{ place.name }}
@@ -59,12 +59,12 @@ export default {
   },
   methods: {
     showTopResults () {
-      this.results = this.places //.slice(0,10)
+      this.results = [...this.places]
     },
     clearResults () {
       setTimeout(() => {
         this.results = []
-      }, 100)
+      }, 250)
     },
     select (place) {
       this.$emit('select', place)
@@ -98,6 +98,7 @@ export default {
 }
 
 .dropdown-menu .dropdown-item {
+  display: block;  
   font-size: 1rem;
 }
 
