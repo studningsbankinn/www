@@ -1,6 +1,12 @@
 <template>
 <section class="section">
   <div class="container">
+    <div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve">
+      <a rel="nofollow" class="rsbtn_play" accesskey="L" title="Hlustaðu á þessa síðu lesna af ReadSpeaker webReader" href="https://app-eu.readspeaker.com/cgi-bin/rsent?customerid=13106&lang=is_is&readid=main">
+        <span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>Hlusta</span></span></span>
+        <span class="rsbtn_right rsimg rsplay rspart"></span>
+      </a>
+    </div>
     <nav class="navbar" role="navigation" aria-label="Leiðarkerfi">
       <div class="navbar-brand">        
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" @click="showNav = !showNav">
@@ -67,9 +73,6 @@ export default {
       showSkip: false,
     }
   },
-  created () {
-    this.getPlaces()
-  },
   methods: {
     selectPlace (place) {
       this.$router.push({
@@ -85,7 +88,10 @@ export default {
           this.places = data.body
         })
     }
-  } 
+  },
+  created () {
+    this.getPlaces()
+  },
 }
 
 </script>
