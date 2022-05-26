@@ -35,7 +35,7 @@ export default {
           component: 'UNCRC'
         },
         {
-          label: 'Stofnanir of félagasamtök',
+          label: 'Stofnanir og félagasamtök',
           component: 'Organizations'
         }        
       ],
