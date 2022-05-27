@@ -1,5 +1,5 @@
 <template>
-<div>     
+<div>
   <Card>
     <h3 class="title is-6 has-text-centered">Hljóðbókasafn</h3>
     <img src="../images/hljodbokasafn_logo.png" alt="Hljóðbókasafn Íslands">
@@ -9,7 +9,7 @@
   </Card>
   
 
-  <Card>    
+  <Card>
     <h3 class="title is-6 has-text-centered">Árnastofnun</h3>
     <img src="../images/arnastofnun_logo.png" alt="Árnastofnun">
     <!-- Spurning að senda póst á Guðrúnu Nordal, kynna verkefnið og nefna að við viljum geta bent á gagnleg tól á þeirra vegum á síðunni okkar…  -->
@@ -25,11 +25,11 @@
     <h3 class="title is-6 has-text-centered">Félag lesblindra á Íslandi</h3>
     <img src="../images/felag_lesblindra_logo.png" alt="Félag lesblindra">
     <p>Félags lesblindra veitir lesblindum stuðning og fræðslu. Þeir geta meðal annars leiðbeint um réttindi til aðstoðar og hvar hægt er að nálgast ýmsa þjónustu. Félagið sinnir einnig margvíslegri hagsmunagæslu í tengslum við skólastarf.</p>
-    <p>Félag lesblindra: <a href="https://www.lesblindir.is/">lesblindir.is</a></p>        
+    <p>Félag lesblindra: <a href="https://www.lesblindir.is/">lesblindir.is</a></p>
   </Card>
 
-  <Card>    
-    <h3 class="title is-6 has-text-centered">Rauði krossinn</h3>    
+  <Card>
+    <h3 class="title is-6 has-text-centered">Rauði krossinn</h3>
     <img src="../images/raudi_krossinn_logo.png" alt="Rauði Krosinn">
     <p>Rauði krossinn um allt land veitir einstaklingum í erfiðleiku margvíslega aðstoð.</p>
     <p>Aðstoð í boði - Rauði krossinn: <a href="https://www.raudikrossinn.is/hvad-gerum-vid/adstod-i-bodi/">raudikrossinn.is/hvad-gerum-vid/adstod-i-bodi</a></p>
@@ -37,14 +37,14 @@
     <p>Námsaðstoð: <a href="https://www.raudikrossinn.is/hvad-gerum-vid/krakkanam">raudikrossinn.is/hvad-gerum-vid/krakkanam</a></p>  
   </Card>
   
-   <Card>    
-    <h3 class="title is-6 has-text-centered">Tiro</h3>    
+   <Card>
+    <h3 class="title is-6 has-text-centered">Tiro</h3>
     <img src="../images/tiro_logo.png" alt="Tiro">
     <p>Sjálfvirk talgreining fyrir íslenskt talmál yfir í ritaðan texta.</p>
     <p>Tiro er fremst á sviði talgreiningar á íslensku. Við sköpum notendavænar lausnir sem byggja á máltækni og gervigreind. Þau bjóða upp á:
     Rauntímatextun þar sem beinar útsendingar verða aðgengilegri með sjálfvirkri textun í rauntíma. 
     Skjátextun þar sem hjálpar þér að bæta íslenskum texta við myndbandið þitt hratt og örugglega. 
-    Sérsníðin talgreining þar sem þau sérhæfa sig í að þróa sértækar lausnir sem nota íslenska talgreiningu.
+    Sérsníðin talgreining þar sem þau sérhæfa sig í að þróa sértækar lausnir sem nota íslenska talgreiningu.</p>
     <p>Nánar hér: <a href="https://tiro.is/">https://tiro.is/</a></p>
    </Card>
 

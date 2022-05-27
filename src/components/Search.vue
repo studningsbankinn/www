@@ -77,7 +77,7 @@ export default {
         const shortName = place.shortName && place.shortName.toUpperCase().includes(this.search.toUpperCase())
         const abbreviation = place.abbreviation && place.abbreviation.toUpperCase().includes(this.search.toUpperCase())
 
-        return name || shortName  || abbreviation
+        return name || shortName || abbreviation
       })
     },
   },

@@ -5,12 +5,12 @@
       <Welcome /> 
     </div>
   </div>
-  <div class="columns has-text-centered">     
+  <div class="columns has-text-centered">
     <div class="column is-12">
       <h2 class="title is-2">Einkunnagjöf skóla</h2>
       <p>Við spurðum alla framhaldsskóla landsins já eða nei spurninga varðandi aðgengi, aðstoð og aðbúnað. Á grafinu hér fyrir neðan sést hvaða skólar standa sig best.</p>
       <div style="min-height:600px;margin-top:1rem;">
-        <Chart :series="answers" categoryName="placeName"  />
+        <Chart :series="answers" labelKey="placeName" orderKey="placeName" />
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ export default {
       })        
     
     agent
-      .get(process.env.STUDNINGSBANKINN_API_URL + '/answers/')      
+      .get(process.env.STUDNINGSBANKINN_API_URL + '/answers/')
       .set('Authorization', 'Bearer ' + process.env.STUDNINGSBANKINN_API_KEY)
       .then(data => {
         this.answers = data.body

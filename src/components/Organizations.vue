@@ -1,7 +1,7 @@
 <template>
 <div>
   <p class="has-text-centered">Hér má finna stofnanir og félagasamtök sem snúa að því að styðja fólk með ýmist fatlanir og sértæka námsörðugleika. Látið endilega vita á sigvaldi@neminn.is ef ykkur dettur í hug fleiri stofnanir og félagasamtök sem gætu nýst hópnum. </p>      
-  <h2 class="title is-4 has-text-centered">Námsörðugleikar</h2>    
+  <h2 class="title is-4 has-text-centered">Námsörðugleikar</h2>
   <Card>
     <h3 class="title is-6 has-text-centered">Félag lesblindra - <a href="https://www.lesblindir.is/">lesblindir.is</a></h3>
     <p>Hjá félaginu má finna upplýsingar og fræðsluefni um félagið. Jafnframt má finna ýmislegt gagnlegt á netinu s.s. <a href="http://www.lynda.com/">lynda.com/</a>, svo sem mákennslumyndbönd um allt milli himins og jarðar, s.s. að læra á hugbúnað, hvernig er hægt að bæta sig í að taka ljósmyndir, auka lestrarhraða og margt fleira. Einnig má finna upplýsingar  um tæknilega aðstoð. </p>
@@ -14,7 +14,7 @@
     <p>Hringsjá er náms- og starfsendurhæfing fyrir fólk sem vill komast aftur út á vinnumarkað eftir hlé vegna sjúkdóma, slysa eða annarra áfalla. Hjá félaginu má fá ráðgjöf, stuðning og sækja námskeið, svosem; Úr frestun í framkvæmd, Í FÓKUS- að ná fram því besta með ADHD, sjálfstyrking, minnistækni, tölvur og fleira.</p>
     <p>Sími: 510 9380</p>
     <p>Netfang: hringsja@hringsja.is</p>
-  </Card>    
+  </Card>
 
   <Card>
     <h3 class="title is-6 has-text-centered">Hljóðbókasafnið – <a href="https://www.hbs.is/">hbs.is</a></h3>
@@ -25,7 +25,7 @@
 
   <Card>
     <h3 class="title is-6 has-text-centered">Spurning.is náms og starfsráðgjöf - <a href="https://www.spurning.is/">spurning.is</a></h3>
-    <p>Sigríður Birna Bragadóttir, MSW í náms- og starfsráðgjöf,  hefur trú á mikilvægi náms- og starfsráðgjafar í lífinu öllu. Hún vinnur sem Náms-og starfsráðgjafi í Menntaskólanum við Hamrahlíð en opnaði spurning.is árið 2013. Með spurning.is vill hún veita bestu þjónustu sem völ er á og aðstoða við val á námi og starfi.</p>
+    <p>Sigríður Birna Bragadóttir, MSW í náms- og starfsráðgjöf, hefur trú á mikilvægi náms- og starfsráðgjafar í lífinu öllu. Hún vinnur sem Náms-og starfsráðgjafi í Menntaskólanum við Hamrahlíð en opnaði spurning.is árið 2013. Með spurning.is vill hún veita bestu þjónustu sem völ er á og aðstoða við val á námi og starfi.</p>
     <p>Sími: 696 6578</p>
     <p>Netfang: spurning@spurning.is</p>
   </Card>
@@ -37,7 +37,7 @@
     <p>Netfang: hanna.run.eiriksdottir@rvkskolar.is</p>
   </Card>
 
-  <h2 class="title is-4 has-text-centered">Andlegir- og hegðunarörðugleikar</h2>  
+  <h2 class="title is-4 has-text-centered">Andlegir- og hegðunarörðugleikar</h2>
 
   <Card>
     <h3 class="title is-6 has-text-centered">ADHD samtökin - <a href="https://www.adhd.is">adhd.is</a></h3>
@@ -74,7 +74,7 @@
 
   <Card>
     <h3 class="title is-6 has-text-centered">Blindrafélagið - <a href="https://www.blind.is">blind.is</a></h3>
-    <p>Blindrafélagið, samtök blindra og sjónskertra á Íslandi, er samfélagslegt afl  – mannréttindasamtök og hlutverk þess er að stuðla að því að blindir og sjónskertir einstaklingar geti lifað sjálfstæðu og innihaldsríku lífi og séu ábyrgir og virkir samfélagsþegnar.</p>
+    <p>Blindrafélagið, samtök blindra og sjónskertra á Íslandi, er samfélagslegt afl – mannréttindasamtök og hlutverk þess er að stuðla að því að blindir og sjónskertir einstaklingar geti lifað sjálfstæðu og innihaldsríku lífi og séu ábyrgir og virkir samfélagsþegnar.</p>
     <p>Hjá félaginu má finn alls kyns þjónustu og fræðslu, t.d. kynning á Dóru og Karli, íslensku talgervilsröddunum. Þar má jafnframt finna tæknilegar upplýsingar og ýmsar hjálplegar vörur í vefverslun þeirra.</p>
     <p>Sími: 525 0000</p>
     <p>Netfang: blind@blind.is</p>

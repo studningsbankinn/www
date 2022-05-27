@@ -37,7 +37,7 @@ export default {
         {
           label: 'Stofnanir og félagasamtök',
           component: 'Organizations'
-        }        
+        }
       ],
       tab: 'Aðstoð við námið'
     }
@@ -45,9 +45,9 @@ export default {
   computed: {
     tabs () {
       return this.content.map(c => c.label)
-    },    
+    },
     item () {
-      return this.content.find(c => c.label === this.tab)?.component      
+      return this.content.find(c => c.label === this.tab)?.component
     }
   },
   methods: {

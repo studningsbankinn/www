@@ -4,13 +4,13 @@
     <div class="content">
        <slot />
     </div>
-  </div>  
+  </div>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'Card',  
+  name: 'Card',
 }
 </script>
 
