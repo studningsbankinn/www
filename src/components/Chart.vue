@@ -6,13 +6,13 @@
 export default {
   name: 'Chart',
   props: {
-    categoryName: {
+    labelKey: {
       type: String,
       default: 'questionCategoryName'
     },
-    indexAxis: {
+    orderKey: {
       type: String,
-      default: 'x',
+      default: 'questionCategoryOrdering'
     },
     series: {
       type: Array,
@@ -23,36 +23,32 @@ export default {
     return {
       chart: undefined
     }
-  },
-  methods: {
-    calculate(labels) {
-      return labels.map(label => {
-        const category = this.series.filter(item => item[this.categoryName] === label)          
+  },  
+  watch: {
+    series (val) {
+      const labels = val
+        .map(item => item[this.labelKey])
+        .filter((item, index, self) => self.indexOf(item) === index)
+      
+      const data = labels.map(label => {
+        const category = val.filter(item => item[this.labelKey] === label)
         const count = category.length
         const yesCount = category.filter(item => item.answer).length
         return Math.round(yesCount/count * 100)
       })
-    }
-  },
-  watch: {
-    series (val)  {
-      const labels = val
-        .map(item => item[this.categoryName])
-        .filter((item, index, self) => self.indexOf(item) === index)
-        .sort((a, b) => a.localeCompare(b))
-      
+
       this.chart.data = {
         labels,
         datasets: [{
-          data: this.calculate(labels),
+          data,
           backgroundColor: [
             '#e69f00',
-            '#56b4e9',
-            '#f0e442',
             '#019e73',
             '#0072b2',
-            '#d55e00',
             '#cc79a7',
+            '#d55e00',
+            '#56b4e9',
+            '#f0e442',
           ],
         }]
       }
@@ -65,7 +61,7 @@ export default {
       this.chart = new Chart('chart', {
         type: 'bar',
         options: {
-          indexAxis: this.indexAxis,
+          indexAxis: 'x',
           responsive: true,
           maintainAspectRatio: false,
           plugins: {
@@ -75,7 +71,7 @@ export default {
             beginAtZero: true,
             max: 100,
             min: 0,
-            stepSize: 10,                       
+            stepSize: 10,
           },
         },
         data: {}
