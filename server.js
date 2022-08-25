@@ -11,8 +11,7 @@ if (process.env.NODE_ENV === 'production') {
   }))
   app.use(compression())
   app.use(helmet({
-    contentSecurityPolicy: false,
-    crossOriginResourcePolicy: false
+    contentSecurityPolicy: false
   }))
 }
 
