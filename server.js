@@ -5,14 +5,15 @@ const helmet = require('helmet')
 const enforceHttps = require('express-sslify').HTTPS
 const app = express()
 
+app.use(helmet({
+  contentSecurityPolicy: false
+}))
+
 if (process.env.NODE_ENV === 'production') {
   app.use(enforceHttps({
     trustProtoHeader: true
   }))
-  app.use(compression())
-  app.use(helmet({
-    contentSecurityPolicy: false
-  }))
+  app.use(compression())  
 }
 
 app.use(bodyParser.json())
