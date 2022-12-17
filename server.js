@@ -5,6 +5,8 @@ const helmet = require('helmet')
 const enforceHttps = require('express-sslify').HTTPS
 const app = express()
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 app.use((_, res, next) => {
   res.cookie(
     'STUDNINGSBANKINN_API',
@@ -26,7 +28,7 @@ app.use(helmet({
   contentSecurityPolicy: false
 }))
 
-if (process.env.NODE_ENV === 'production') {
+if (isProduction) {
   app.use(enforceHttps({
     trustProtoHeader: true
   }))
