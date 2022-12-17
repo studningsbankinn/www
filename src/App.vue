@@ -85,7 +85,6 @@ export default {
     getPlaces () {
       return agent
         .get(process.env.STUDNINGSBANKINN_API_URL + '/places')
-        .set('Authorization', 'Bearer ' + process.env.STUDNINGSBANKINN_API_KEY)
         .then(data => {
           this.places = data.body
         })

@@ -5,6 +5,23 @@ const helmet = require('helmet')
 const enforceHttps = require('express-sslify').HTTPS
 const app = express()
 
+app.use((_, res, next) => {
+  res.cookie(
+    'STUDNINGSBANKINN_API',
+    process.env.STUDNINGSBANKINN_API_KEY,
+    {
+      domain: '.studningsbankinn.is',
+      secure: isProduction,
+      maxAge: 2147483647000,
+      httpOnly: true,
+      sameSite: true,
+      path: '/'
+    }
+  )
+
+  return next()
+})
+
 app.use(helmet({
   contentSecurityPolicy: false
 }))

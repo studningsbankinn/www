@@ -37,14 +37,12 @@ export default {
   created() {
     agent
       .get(process.env.STUDNINGSBANKINN_API_URL + '/places')
-      .set('Authorization', 'Bearer ' + process.env.STUDNINGSBANKINN_API_KEY)
       .then(data => {
         this.places = data.body
       })        
     
     agent
       .get(process.env.STUDNINGSBANKINN_API_URL + '/answers/')
-      .set('Authorization', 'Bearer ' + process.env.STUDNINGSBANKINN_API_KEY)
       .then(data => {
         this.answers = data.body
       })      
