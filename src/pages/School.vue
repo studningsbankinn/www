@@ -75,6 +75,7 @@ export default {
     getPlace (id) {
       return agent
         .get(process.env.STUDNINGSBANKINN_API_URL + '/places?id='+id)
+        .withCredentials()
         .then(data => {
           this.place = data.body[0]
         })
@@ -82,6 +83,7 @@ export default {
     getAnswers () {
       return agent
         .get(process.env.STUDNINGSBANKINN_API_URL + '/answers?placeId=' + this.place.id)
+        .withCredentials()
         .then(data => {
           this.answers = data.body
           this.selectedTab = this.selectedTab = this.categoryTabs[0]

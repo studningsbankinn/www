@@ -85,6 +85,7 @@ export default {
     getPlaces () {
       return agent
         .get(process.env.STUDNINGSBANKINN_API_URL + '/places')
+        .withCredentials()
         .then(data => {
           this.places = data.body
         })
