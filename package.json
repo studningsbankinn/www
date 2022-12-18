@@ -15,6 +15,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "bulma-carousel": "^4.0.24",
     "bulma-switch": "^2.0.0",
     "compression": "^1.7.4",
     "date-fns": "^2.29.2",

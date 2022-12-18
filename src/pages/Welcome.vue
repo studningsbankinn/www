@@ -3,6 +3,7 @@
   <div class="columns">
     <div class="column is-12">
       <Welcome /> 
+      <FindSchool :statements="statements" :show="showTest"/>
     </div>
   </div>
   <div class="columns has-text-centered">
@@ -20,21 +21,26 @@
 <script>
 import agent from 'superagent'
 import Welcome from '../components/Welcome'
+import FindSchool from '../components/FindSchool'
 import Chart from '../components/Chart'
 
 export default {
   name: 'WelcomePage',
   components: {
     Welcome,
+    FindSchool,
     Chart,
   },
   data() {
     return {
       places: [],
       answers: [],
+      statements: [],
+      showTest: false
     }
   },
   created() {
+    this.showTest = Boolean(this.$route.query.test)
     agent
       .get(process.env.STUDNINGSBANKINN_API_URL + '/places')
       .withCredentials()
@@ -47,7 +53,15 @@ export default {
       .withCredentials()
       .then(data => {
         this.answers = data.body
-      })      
+      })
+
+    agent
+      .get(process.env.STUDNINGSBANKINN_API_URL + '/statements/')
+      .withCredentials()
+      .then(data => {
+        this.statements = data.body
+      })
   }
 }
 </script>
+
