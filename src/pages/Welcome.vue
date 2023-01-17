@@ -11,7 +11,7 @@
       <h2 class="title is-2">Einkunnagjöf skóla</h2>
       <p>Við spurðum alla framhaldsskóla landsins já eða nei spurninga varðandi aðgengi, aðstoð og aðbúnað. Á grafinu hér fyrir neðan sést hvaða skólar standa sig best.</p>
       <div style="min-height:600px;margin-top:1rem;">
-        <Chart :series="answers" labelKey="placeName" orderKey="placeName" />
+        <Chart :series="scores" labelKey="placeName" orderKey="placeName" />
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       places: [],
-      answers: [],
+      scores: [],
       statements: [],
       showTest: false
     }
@@ -49,10 +49,10 @@ export default {
       })        
     
     agent
-      .get(process.env.STUDNINGSBANKINN_API_URL + '/answers/')
+      .get(process.env.STUDNINGSBANKINN_API_URL + '/scores/')
       .withCredentials()
       .then(data => {
-        this.answers = data.body
+        this.scores = data.body
       })
 
     agent

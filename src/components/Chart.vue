@@ -31,10 +31,16 @@ export default {
         .filter((item, index, self) => self.indexOf(item) === index)
       
       const data = labels.map(label => {
-        const category = val.filter(item => item[this.labelKey] === label)
-        const count = category.length
-        const yesCount = category.filter(item => item.answer).length
-        return Math.round(yesCount/count * 100)
+        const categories = val.filter(item => item[this.labelKey] === label)
+        const yesCounts = categories
+          .map(cat => cat.yesCount)
+          .reduce((total, current) => total + current, 0)
+
+        const noCounts = categories
+          .map(cat => cat.noCount)
+          .reduce((total, current) => total + current, 0)
+        
+        return Math.round(yesCounts / (yesCounts + noCounts) *100)
       })
 
       this.chart.data = {

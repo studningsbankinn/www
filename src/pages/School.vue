@@ -5,7 +5,7 @@
       <Info :place="place" />
     </div>  
     <div class="column is-6">
-      <Chart :series="answers" />
+      <Chart :series="scores" />
     </div>
   </div>
 
@@ -37,6 +37,7 @@ export default {
   data () {
     return {
       answers: [],
+      scores: [],
       tab: undefined,
       place: {},
     }
@@ -54,21 +55,19 @@ export default {
   mounted () {
     const placeId = this.$route.params.id
     this.getPlace(placeId).then(() => {
-      this.getAnswers()
+      this.getAnswers(placeId)
+      this.getScores(placeId)
     })
   },
   beforeRouteUpdate (to, from, next) {
     const placeId = to.params.id
     this.getPlace(placeId).then(() => {
-      this.getAnswers()
+      this.getAnswers(placeId)
+      this.getScores(placeId)
       next()
     })
   },
   methods: {
-    selectPlace (place) {
-      this.place = place
-      this.getAnswers()
-    },
     selectTab (tab) {
       this.tab = tab
     },
@@ -80,17 +79,21 @@ export default {
           this.place = data.body[0]
         })
     },
-    getAnswers () {
+    getAnswers (id) {
       return agent
-        .get(process.env.STUDNINGSBANKINN_API_URL + '/answers?placeId=' + this.place.id)
+        .get(process.env.STUDNINGSBANKINN_API_URL + '/answers?placeId=' + id)
         .withCredentials()
         .then(data => {
           this.answers = data.body
           this.selectedTab = this.selectedTab = this.categoryTabs[0]
         })
-        .catch(e => {
-          // Do some error handling
-          console.log(e)
+    },
+    getScores (id) {
+      return agent
+        .get(process.env.STUDNINGSBANKINN_API_URL + '/scores?placeId=' + id)
+        .withCredentials()
+        .then(data => {
+          this.scores = data.body
         })
     }    
   }
