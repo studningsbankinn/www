@@ -64,7 +64,7 @@ export default {
     clearResults () {
       setTimeout(() => {
         this.results = []
-      }, 250)
+      }, 350)
     },
     select (place) {
       this.$emit('select', place)
